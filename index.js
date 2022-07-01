@@ -7,7 +7,10 @@ require('dotenv').config();
 const port = process.env.PORT || 5000;
 
 //middlewares
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 app.use(express.json());
 
 //db connection
